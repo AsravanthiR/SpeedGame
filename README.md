@@ -1,12 +1,13 @@
 # Insttructions for the speedgame
 
-
-
+# How to play the game? 
+You need to push the buttons fast as you can. You can see your score on the screen.
 
 
 
 
 # Getting Started with Create React App
+
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
