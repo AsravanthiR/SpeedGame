@@ -1,5 +1,8 @@
+# Insttructions for the speedgame
+
 # How to play the game? 
-You need tp åush the buttons fast as you can. Ypu can see your scroe in the screen.
+You need to push the buttons fast as you can. You can see your score on the screen.
+
 
 
 
