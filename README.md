@@ -1,4 +1,10 @@
+# How to play the game? 
+You need tp åush the buttons fast as you can. Ypu can see your scroe in the screen.
+
+
+
 # Getting Started with Create React App
+
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
