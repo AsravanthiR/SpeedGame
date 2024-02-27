@@ -1,18 +1,14 @@
-import './App.css';
-import {useState, useEffect } from 'react';
-import { RotateLoader } from 'react-spinners';
-import Header from './Header';
-//import React from 'react';
-
-
-function App() {
-
+import React from "react";
+import Footer from './Footer';
+const App = () => {
   return (
-    
-  <div>
-    <Header/>
-  </div>
+    <div>
+      <Footer />
+        <Header/>
+
+    </div>
   );
-  }
+};
+
 
 export default App;

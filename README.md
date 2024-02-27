@@ -4,6 +4,8 @@
 You need to push the buttons fast as you can. You can see your score on the screen.
 
 
+20 feb _1
+
 
 
 # Getting Started with Create React App
