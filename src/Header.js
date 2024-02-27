@@ -1,4 +1,4 @@
-import React from 'React';
+import React from 'react';
 
 
 export default function Header() {
@@ -6,5 +6,5 @@ export default function Header() {
       <div>
         <h1>Speedgames Header</h1>
       </div>
-    )
+    );
   }
