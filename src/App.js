@@ -4,8 +4,11 @@ const App = () => {
   return (
     <div>
       <Footer />
+        <Header/>
+
     </div>
   );
 };
+
 
 export default App;
