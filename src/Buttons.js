@@ -1,27 +1,35 @@
-import { red } from "@material-ui/core/colors";
-import React from "react";
+//import { red } from "@material-ui/core/colors";
+//import React from "react";
+import React, { useState } from 'react';
 
-function Buttons (){
+function Buttons() {
+    const [selectedButton, setSelectedButton] = useState(null);
+    const [score, setScore] = useState(0);
+  
+    const handleClick = (buttonName) => {
+      // If the same button is clicked again, keep adding the scorepoints
+      if (selectedButton !== buttonName) {
+        setScore((prevScore) => prevScore + 5);
+      }
+      setSelectedButton(buttonName);
+    };
 
-    const testbutton1 = () => {
-        
-    }
-
-    const testbutton2 = () => {
-
-    }
-
-    const testbutton3 = () => {
-
-    }
-
-
-return(
-    <div>
-        <button onClick={testbutton1}>PUNAINEN</button>
-        <button onClick={testbutton2}>VIHREÄ</button>
-        <button onClick={testbutton3}>KELTAINEN</button>
-    </div>
-);
+  //making sure that one button is clicked at the time
+  return (
+    //chatgpts given
+        <div>
+        <p>Score: {score}</p>
+        <button onClick={() => handleClick('LEFT')} disabled={selectedButton === 'LEFT'}>
+            LEFT
+        </button>
+        <button onClick={() => handleClick('MIDDLE')} disabled={selectedButton === 'MIDDLE'}>
+            MIDDLE
+        </button>
+        <button onClick={() => handleClick('RIGHT')} disabled={selectedButton === 'RIGHT'}>
+            RIGHT
+        </button>
+        </div>
+        );
 }
+
 export default Buttons;
