@@ -1,35 +1,34 @@
-//import { red } from "@material-ui/core/colors";
-//import React from "react";
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 
 function Buttons() {
-    const [selectedButton, setSelectedButton] = useState(null);
-    const [score, setScore] = useState(0);
-  
-    const handleClick = (buttonName) => {
-      // If the same button is clicked again, keep adding the scorepoints
-      if (selectedButton !== buttonName) {
-        setScore((prevScore) => prevScore + 5);
-      }
-      setSelectedButton(buttonName);
-    };
+  const buttonNames = ['LEFT', 'MIDDLE', 'RIGHT'];
+  const [selectedButton, setSelectedButton] = useState(null);
+  const [score, setScore] = useState(0);
 
-  //making sure that one button is clicked at the time
+  const getRandomButton = () => {
+    const randomIndex = Math.floor(Math.random() * buttonNames.length);
+    return buttonNames[randomIndex];
+  };
+
+  const handleButtonClick = (buttonName) => {
+    setSelectedButton(buttonName);
+    setScore((prevScore) => prevScore + 5);
+  };
+
   return (
-    //chatgpts given
-        <div>
-        <p>Score: {score}</p>
-        <button onClick={() => handleClick('LEFT')} disabled={selectedButton === 'LEFT'}>
-            LEFT
+    <div>
+      {buttonNames.map((buttonName) => (
+        <button
+          key={buttonName}
+          onClick={() => handleButtonClick(buttonName)}
+          className={selectedButton === buttonName ? 'selected' : ''}
+        >
+          {buttonName}
         </button>
-        <button onClick={() => handleClick('MIDDLE')} disabled={selectedButton === 'MIDDLE'}>
-            MIDDLE
-        </button>
-        <button onClick={() => handleClick('RIGHT')} disabled={selectedButton === 'RIGHT'}>
-            RIGHT
-        </button>
-        </div>
-        );
+      ))}
+      <p>Score: {score}</p>
+    </div>
+  );
 }
 
 export default Buttons;

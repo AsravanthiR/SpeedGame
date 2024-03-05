@@ -37,3 +37,15 @@ right:0;
   color:rgb(55, 79, 67);
 }
 
+button {
+  background-color: #3498db; /* Set your desired button color */
+  color: white;
+  padding: 10px;
+  margin: 5px;
+  border: none;
+  cursor: pointer;
+}
+
+button.selected {
+  outline: 4px solid black; /* Set your desired outline color */
+}
