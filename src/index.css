@@ -37,3 +37,15 @@ right:0;
   color:rgb(55, 79, 67);
 }
 
+.nappula {
+  background-color: #3498db; /* Set desired button color */
+  color: white;
+  padding: 10px;
+  margin: 5px;
+  border: none;
+  cursor: pointer;
+}
+
+nappula.selected {
+  outline: 4px solid black; /* Set desired outline color */
+}
