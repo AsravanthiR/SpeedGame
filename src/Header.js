@@ -1,7 +1,7 @@
 import React from 'react';
 
 
-function Header() {
+export default function Header() {
     return (
       <div className="header">
         <h1>Speedgame</h1>
@@ -13,7 +13,7 @@ function Header() {
     );
   }
 
-export default Header;
+
 
 
 

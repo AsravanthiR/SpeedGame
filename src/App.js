@@ -1,16 +1,14 @@
 import React from "react";
 import Footer from './Footer';
 import Header from './Header';
-import Buttons from './Nappulat';
-import Nappula from './Nappula';
+import Buttons from './Buttons';
 
 const App = () => {
   return (
     <div>
-      <Footer/>
+      <Footer />
       <Header/>
       <Buttons/>
-      <Nappula />
     </div>
 
 
