@@ -21,13 +21,45 @@ code {
 footer {
   height: 100px;
   padding: 2rem;
+  text-align: center;
+  position:fixed;
+  left:0;
+  bottom:0;
+  right:0;
 }
 
-footer {
-
+.header {
   text-align: center;
-  position:absolute;
-left:0;
-bottom:0;
-right:0;
+  color:rgb(55, 79, 67);
+}
+
+button {
+  background-color: #147846; /* Set your desired button color */
+  color: rgb(255, 255, 255);
+  padding: 10px;
+  margin: 5px;
+  border-radius: 50%;
+  cursor: pointer;
+  height: 150px;
+  width: 150px;
+  display:inline;
+  text-align: center;
+}
+
+button.selected {
+  outline: 4px solid black; /* Set your desired outline color */
+}
+
+.buttoncontainer {
+  text-align: center;
+  border: 10px solid rgb(6, 6, 6);
+  padding-top: 40px;
+  padding-bottom: 40px;
+}
+.scorecontainer {
+  text-align: center;
+  border: 10px solid rgb(9, 9, 9);
+  padding-top: 40px;
+  padding-bottom: 40px;
+  font-size: medium;
 }

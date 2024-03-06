@@ -5,7 +5,7 @@ const Footer = () => {
     <footer>
       <div className='text-center' style={{ backgroundColor: 'rgba(255, 0, 0, 0.2)'
 }}>
-        &copy; {new Date().getFullYear()} Copyright:{' Jutta Virta & Sravanthi Avadhanula '}
+        &copy; {new Date().getFullYear()} Copyright:{' Jutta Angelma & Sravanthi Avadhanula '}
         
          
       </div>
