@@ -39,9 +39,9 @@ function Buttons() {
       ))}
               <>{randomButton }</>
 
-     </div>
+     </div><div className="scorecontainer">
       <p>Score: {score}</p>
-    </div>
+    </div></div>
   );
 }
 

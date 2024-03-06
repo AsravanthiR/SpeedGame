@@ -34,8 +34,8 @@ footer {
 }
 
 button {
-  background-color: #ae824c; /* Set your desired button color */
-  color: white;
+  background-color: #147846; /* Set your desired button color */
+  color: rgb(255, 255, 255);
   padding: 10px;
   margin: 5px;
   border-radius: 50%;
@@ -52,7 +52,14 @@ button.selected {
 
 .buttoncontainer {
   text-align: center;
-  border: 2px solid purple;
+  border: 10px solid rgb(6, 6, 6);
   padding-top: 40px;
   padding-bottom: 40px;
+}
+.scorecontainer {
+  text-align: center;
+  border: 10px solid rgb(9, 9, 9);
+  padding-top: 40px;
+  padding-bottom: 40px;
+  font-size: medium;
 }
