@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState , useEffect} from 'react';
 
 //buttonelements array, when selected starting from zero
 function Buttons() {
@@ -16,33 +16,38 @@ function Buttons() {
   const handleButtonClick = (buttonName) => {
     setSelectedButton(buttonName);
     setScore((prevScore) => prevScore + 5);
+    
   };
 
+  useEffect(()=> {
+    const handle =  setInterval(() => {
+      setRandomButton (getRandomButton())
+  }, 3000);
+  return () => {
+    clearInterval(handle);
+  }
+  })
+
   
-  setInterval(() => {
-    setRandomButton (getRandomButton())
-}, 3000);
- 
+return (
+  <div><div className="buttoncontainer">
+    {buttonNames.map((buttonName) => (
+      <button
+        key={buttonName}
+        onClick={() => handleButtonClick(buttonName)}
+        className={selectedButton === buttonName ? 'selected' : ''}
+        style={randomButton === buttonName ? {border:`20px solid red`}: {}}
+      >
+        {buttonName}
 
-  return (
-    <div><div className="buttoncontainer">
-      {buttonNames.map((buttonName) => (
-        <button
-          key={buttonName}
-          onClick={() => handleButtonClick(buttonName)}
-          className={selectedButton === buttonName ? 'selected' : ''}
-          style={randomButton === buttonName ? {border:`20px solid red`}: {}}
-        >
-          {buttonName}
+      </button>
+    ))}
+            <>{randomButton }</>
 
-        </button>
-      ))}
-              <>{randomButton }</>
-
-     </div><div className="scorecontainer">
-      <p>Score: {score}</p>
-    </div></div>
-  );
+   </div><div className="scorecontainer">
+    <p>Score: {score}</p>
+  </div></div>
+);
 }
 
 export default Buttons;
